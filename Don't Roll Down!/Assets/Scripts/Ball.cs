@@ -19,7 +19,7 @@ public class Ball : MonoBehaviour
     {
         speed += inc_speed * Time.deltaTime;
 
-        if (transform.position.y <= 0.50f)
+        if (transform.position.y <= 0.74f)
         {
             fall = true;
         }

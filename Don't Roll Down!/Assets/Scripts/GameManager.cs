@@ -24,7 +24,6 @@ public class GameManager : MonoBehaviour
     {
         if (Ball.fall == true)
         {
-            GameOverScene.gameObject.SetActive(true);
             StartCoroutine(GameOver());
         }
     }
@@ -47,6 +46,8 @@ public class GameManager : MonoBehaviour
     {
         StartButton.gameObject.SetActive(false);
         HighScoreText.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        GameOverScene.gameObject.SetActive(true);
         yield return new WaitForSeconds(3f);
         Time.timeScale = 0f;
     }
